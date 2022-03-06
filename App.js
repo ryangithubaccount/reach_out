@@ -10,7 +10,9 @@ import Login from './screens/Login';
 import Signup from './screens/Signup';
 import Chat from './screens/Chat';
 import FriendDisplay from './screens/FriendList';
-import Status1 from './screens/Status1'
+import Status1 from './screens/Status1';
+import Feed from './screens/Feed';
+
 
 const Stack = createStackNavigator();
 
@@ -31,20 +33,13 @@ function AuthStack() {
   );
 }
 
-function FriendDisplayStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name='Friend' component={FriendDisplay}/>
-      <Stack.Screen name='Chat' component={Chat} />
-    </Stack.Navigator>
-  );
-}
-
 function StatusStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Status1' component={Status1}/>
-      
+      <Stack.Screen name='Status' component={Status1}/>
+      <Stack.Screen name='Feed' component={Feed}/>
+      <Stack.Screen name='Friend' component={FriendDisplay}/>
+      <Stack.Screen name='Chat' component={Chat} />
     </Stack.Navigator>
   );
 }
